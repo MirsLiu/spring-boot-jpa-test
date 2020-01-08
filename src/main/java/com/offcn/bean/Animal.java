@@ -12,6 +12,11 @@ import javax.persistence.Table;
 /**
  * 分支添加实体类
  */
+/*
+修改后的实体类
+Time:2020年1月8日16:33:30
+author:小王
+*/
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

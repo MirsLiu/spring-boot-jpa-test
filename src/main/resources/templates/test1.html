@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">test1</title>
+</head>
+<body>
+<h1 th:text="${person.name}"></h1><h2 th:text="${person.age}"></h2>
+<span th:text="'你好啊,'+${name}"></span><br>
+<span th:text="|你好啊,${name}|"></span><br>
+<!--判断语句的使用,unless是if的取反,if是成功就显示,而unless是不成功就显示-->
+<h1 th:if="${test}==yes"><span th:text="${name}"></span></h1>
+<h2 th:unless="${test}==no"><span th:text="${gname}"></span></h2>
+
+</body>
+</html>

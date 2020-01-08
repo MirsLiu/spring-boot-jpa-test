@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!--利用#读取自定义配置文件中的属性-->
+    <title th:text="#{title}">test1</title>
+</head>
+<body>
+<div>
+    <table cellpadding="1" cellspacing="0" border="1">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>名字</th>
+            <th>年龄</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="person,iterStat : ${list}">
+            <td th:text="${iterStat.count}"></td>
+            <td th:text="${person.name}"></td>
+            <td th:text="${person.age}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!--switch选择语句,下面的语句必须包含到switch中才可以-->
+<div th:switch="${role}">
+    <p th:case="admin">管理员</p>
+    <p th:case="${role}">角色</p>
+</div>
+</body>
+</html>
